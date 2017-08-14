@@ -1,0 +1,39 @@
+.paint path,
+.paint polygon,
+.paint line {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dash 3s linear;
+    animation-fill-mode: forwards;
+}
+
+.wrap {
+    position: relative;
+    width: 1000px;
+    border: 1px solid #000;
+}
+
+.page.paint {
+    animation: move 3s linear;
+    transform: translateX(0);
+}
+
+.page {
+    transform: translateX(20px);
+    display: none;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
