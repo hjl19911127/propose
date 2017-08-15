@@ -1,6 +1,5 @@
 (function () {
     var pages = document.querySelectorAll('.page'), i = 0;
-    console.log(pages);
     function next() {
         pages[i - 1] && (pages[i - 1].style.display = 'none');
         pages[i] && (pages[i].style.display = 'block');
@@ -10,7 +9,13 @@
         if (pages[i]) next();
         setTimeout(function () {
             play();
-        }, 3000)
+        }, 5000)
     }
+    function prev() {
+        pages[i] && (pages[i].style.display = 'none');
+        pages[i - 1] && (pages[i - 1].style.display = 'block');
+        i--;
+    }
+    window.addEventListener();
     play();
 })()
